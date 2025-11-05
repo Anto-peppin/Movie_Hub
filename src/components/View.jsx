@@ -19,7 +19,27 @@ const View = () => {
        }
        viewFun()
   },[])
-    
+    // const handleDownload = async(img,title)=>{
+    //  try {
+    // //  const responce = await axios.get(`https://image.tmdb.org/t/p/w500/${img}`,{responseType:'blob'})
+    // //  const blobUrl = URL.createObjectURL(responce.data)
+
+    // //    const a = document.createElement('a')
+    // //   a.href = blobUrl
+    // //   a.download = title
+    // //   document.body.appendChild(a)
+    // //   a.click()
+    // //   document.body.removeChild(a)
+
+    // //  URL.revokeObjectURL(blobUrl)
+    // window.location.href = `/api/download?url=${encodeURIComponent(img)}`;
+     
+    //  } catch (error) {
+    //   console.log(error.message);
+      
+      
+    //  }
+    // }
 
     
   return (
@@ -40,7 +60,9 @@ const View = () => {
 
         <div className=" gs flex gap-6 ">
           <button className="btn btn-info">Book Now</button>
-          <button className="btn btn-accen btn-outline">View Info</button>
+          <a href={`https://image.tmdb.org/t/p/w500/${viewData.backdrop_path}`} target="_blank" download={viewData.title} rel="noopener noreferrer">
+          <button className="btn btn-accen btn-outline" >Download</button>
+          </a>
         </div>
       </main>
    

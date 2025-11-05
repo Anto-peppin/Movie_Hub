@@ -60,8 +60,9 @@ const Home = () => {
 
         <div className=" gs flex gap-6 ">
           <button className="btn btn-info">Book Now</button>
-          <button className="btn btn-accen btn-outline">View Info</button>
-        </div>
+<a href={`./poster.jpg`} target="_blank" download='batman' rel="noopener noreferrer">
+          <button className="btn btn-accen btn-outline" >Download</button>
+          </a>        </div>
       </main>
     </div>
    
